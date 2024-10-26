@@ -1,22 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess Game</title>
     <style>
-   
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        #attempt-notice {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        #attempt-notice-main, #win-notice, #notice {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        #win-notice {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        #notice {
+            color: #b85c5c;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #dcdcdc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+            margin-bottom: 15px;
+            text-align: center;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #try {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        #try:hover {
+            background-color: #0056b3;
+        }
+
+        #reset {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        #reset:hover {
+            background-color: #c0c0c0;
+        }
     </style>
-  </head>
-  <body>
-    <h2>Guess a number between 1-10</h2>
-    <span id="attempt-notice">3</span> attempt left
-    <h4 id="attempt-notice-main"></h4>
-    <h4 id="win-notice" style="color: green"></h4>
-    <p id="notice" style="color: brown"></p>
-    <input type="number" name="" id="gess" />
-    <button id="try">Try Now</button>
-    <button id="reset">Reset</button>
+</head>
+<body>
+    <div class="container">
+        <h2>Guess number between 1-10</h2>
+        <span id="attempt-notice">3</span> attempt left
+        <h4 id="attempt-notice-main"></h4>
+        <h4 id="win-notice"></h4>
+        <p id="notice"></p>
+        <input type="number" id="gess" placeholder="Enter your guess"/>
+        <button id="try">Try Now</button>
+        <button id="reset">Reset</button>
+    </div>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
