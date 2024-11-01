@@ -29,9 +29,9 @@ function guessNumber() {
         document.getElementById("win-notice").innerText = "";
 
         if (guess < target) {
-          document.getElementById("notice").innerText = "Too low!";
+         return document.getElementById("notice").innerText = "Too low!";
         } else if (guess > target) {
-          document.getElementById("notice").innerText = "Too high!";
+          return document.getElementById("notice").innerText = "Too high!";
         } else {
           document.getElementById("notice").innerText = "";
           document.getElementById("attempt-notice-main").innerText = "";
